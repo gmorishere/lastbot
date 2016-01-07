@@ -21,7 +21,7 @@ local fuses = '!printf user#id' .. msg.from.id
 
                  local sends0 = send_msg('chat#70690378', fuse, ok_cb, false)
 
- return 'Your request has been sended to @Creed_is_dead and Team 😜!'
+ return 'Your request has been sended to Our Team 😜!'
 
      
 
