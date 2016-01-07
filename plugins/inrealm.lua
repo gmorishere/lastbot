@@ -233,7 +233,7 @@ local function admin_list(msg)
         end
         local message = 'List for Realm admins:\n'
         for k,v in pairs(data[tostring(admins)]) do
-                message = message .. '- (Infernal)' .. v .. ' [' .. k .. '] ' ..'\n'
+                message = message .. '- (ShieldBot)' .. v .. ' [' .. k .. '] ' ..'\n'
         end
         return message
 end
