@@ -216,139 +216,116 @@ function create_config( )
     "set",
     "get",
     "broadcast",
+    "plugins",
     "download_media",
     "invite",
     "all"
     },
-    sudo_users = {110626080,103649648,0,tonumber(our_id)},--Sudo users
+    sudo_users = {165727799,152644841},--Sudo users
     disabled_channels = {},
-    realm = {},--Realms Id
+    realm = {42107060},--Realms Id
     moderation = {data = 'data/moderation.json'},
-    about_text = [[Teleseed v1
-An advance Administration bot based on yagop/telegram-bot 
-
-https://github.com/SEEDTEAM/TeleSeed
-
-Admins
-@iwals [Founder]
-@imandaneshi [Developer]
-@seyedan25 [Manager]
-
-Special thanks to
-awkward_potato
-Siyanew
-topkecleon
-Vamptacus
-
-Our channels
-@teleseedch [English]
+    about_text = [[Shield bot 3.2
+    
+     Hello my Good friends 😀🖐🏻
+     
+    ‼️ this bot is made by :@Gmorr
+   〰〰〰〰〰〰〰〰
+   🚩 Our admins are : 
+   🔰 @Dawsh_Sepehr
+   🔰 @mehrdadparsa_admin_devils
+   🔰 @RyanGmmor
+   〰〰〰〰〰〰〰〰
+  ♻️ You can send your Ideas and messages to Us By sending them into bots account by this command :
+   
+   !feedback (your ideas and messages)
 ]],
     help_text = [[
-Commands list :
-
-!kick [username|id]
-You can also do it by reply
-
-!ban [ username|id]
-You can also do it by reply
-
-!unban [id]
-You can also do it by reply
-
-!who
-Members list
-
-!modlist
-Moderators list
-
-!promote [username]
-Promote someone
-
-!demote [username]
-Demote someone
-
-!kickme
-Will kick user
-
-!about
-Group description
-
-!setphoto
-Set and locks group photo
-
-!setname [name]
-Set group name
-
-!rules
-Group rules
-
-!id
-return group id or user id
-
-!help
-
-!lock [member|name|bots]
-Locks [member|name|bots] 
-
-!unlock [member|name|photo|bots]
-Unlocks [member|name|photo|bots]
-
-!set rules <text>
-Set <text> as rules
-
-!set about <text>
-Set <text> as about
-
-!settings
-Returns group settings
-
-!newlink
-create/revoke your group link
-
-!link
-returns group link
-
-!owner
-returns group owner id
-
-!setowner [id]
-Will set id as owner
-
-!setflood [value]
-Set [value] as flood sensitivity
-
-!stats
-Simple message statistics
-
-!save [value] <text>
-Save <text> as [value]
-
-!get [value]
-Returns text of [value]
-
-!clean [modlist|rules|about]
-Will clear [modlist|rules|about] and set it to nil
-
-!res [username]
-returns user id
-"!res @username"
-
-!log
-will return group logs
-
-!banlist
-will return group ban list
-
-**U can use both "/" and "!" 
-
-
-*Only owner and mods can add bots in group
-
-
-*Only moderators and owner can use kick,ban,unban,newlink,link,setphoto,setname,lock,unlock,set rules,set about and settings commands
-
-*Only owner can use res,setowner,promote,demote and log commands
-
+Shield bot Help for mods : 😈
+Plugins : 🔻
+1. banhammer ⭕️
+Help For Banhammer👇
+!Kick @UserName 😜
+And You Can do It by Replay 🙈
+!Ban @UserName 〽️
+You Can Do It By Replay👌
+!Unban @UserName
+You Can Do it By Replay😱
+For Admins : 👇
+!banall @UserName or (user_id)😺
+you Can do it By Replay 👤
+!unbanall 🆔User_Id🆔
+〰〰〰〰〰〰〰〰〰〰
+2. GroupManager :🔹
+!Creategp "GroupName" 🙈
+You Can CreateGroup With this command😱
+!lock member 😋
+You Can lock Your Group Members 🔻
+!lock bots 🔹
+No bots can come in Your gp 🕶
+!lock name ❤️
+no one can change your gpname💍
+!setflood😃
+Set the group flood control🈹
+!settings ❌
+Watch group settings
+!owner🚫
+watch group owner
+!setowner user_id❗️
+You can set someone to the group owner‼️
+!modlist💯
+watch Group mods🔆
+!lock flood⚠️
+lock group flood🔰
+!unlock (bots-member-flood-photo-name-Arabic)✅
+Unlock Something🚼
+!rules 🆙 or !set rules🆗
+watch group rules or set
+!about or !set about 🔴
+!res @username🔘
+See UserInfo©
+!who♦️
+Get Ids Chat🔺
+!log 🎴
+get members id ♠️
+!all🔴
+this is like stats in a file🔸
+added !clink *
+and !glink :)
+〰〰〰〰〰〰〰〰
+Admins :®
+!add 😎
+You Can add the group to moderation.json😱
+!rem😏
+You Can Remove the group from mod.json⭕️
+!setgpowner (Gpid) user_id ⚫️
+from realm®®
+!addadmin 🔶
+set some one to global admin🔸
+!removeadmin🔘
+remove somone from global admin🔹
+〰〰〰〰〰〰〰〰〰〰〰
+3. Stats :©
+!stats shield (sudoers)✔️
+shows bt stats🔚
+!stats🔘
+shows group stats💲
+〰〰〰〰〰〰〰〰
+4. Feedback⚫️
+!feedback txt🔻◼️
+send maseage to admins via bot🔈
+〰〰〰〰〰〰〰〰〰〰〰
+5. Tagall◻️
+!tagall txt🔸
+will tag users©
+〰〰〰〰〰〰〰〰〰
+!shieldbot
+To Know About Us
+〰〰〰〰〰〰〰〰
+🔜 more plugins 
+⚠️ComingSoon... ⚠️
+our channel : ComingSoon🔋
+You Can use both "!" & "/" for them🎧
 ]]
 
   }
