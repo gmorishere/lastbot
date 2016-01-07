@@ -290,8 +290,9 @@ Get Ids Chat🔺
 get members id ♠️
 !all🔴
 this is like stats in a file🔸
-added !clink *
-and !glink :)
+for getting link use :
+getting !link *
+revoke !clink :)
 〰〰〰〰〰〰〰〰
 Admins :®
 !add 😎
