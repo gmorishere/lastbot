@@ -223,7 +223,7 @@ function create_config( )
     },
     sudo_users = {165727799,152644841},--Sudo users
     disabled_channels = {},
-    realm = {42107060},--Realms Id
+    realm = {76947589,44169040},--Realms Id
     moderation = {data = 'data/moderation.json'},
     about_text = [[Shield bot 3.2
     
