@@ -275,10 +275,16 @@ watch group owner
 You can set someone to the group owner‼️
 !modlist💯
 watch Group mods🔆
-!lock flood⚠️
-lock group flood🔰
+!lock|unlock (bots-member-photo-name-Arabic)✅️
+lock something🔰
 !unlock (bots-member-flood-photo-name-Arabic)✅
 Unlock Something🚼
+!sticker warn
+for giving warning to somebody (when send sticker)
+!sticker kick 
+for kicking somebody (when send sticker)
+!sticker ok
+for unlock sending sticker
 !rules 🆙 or !set rules🆗
 watch group rules or set
 !about or !set about 🔴
@@ -291,8 +297,9 @@ get members id ♠️
 !all🔴
 this is like stats in a file🔸
 for getting link use :
-getting !link *
-revoke !clink :)
+getting !link 😏
+getting link in pv !linkpv😏
+revoke !clink😏 :)
 〰〰〰〰〰〰〰〰
 Admins :®
 !add 😎
