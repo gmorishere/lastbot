@@ -312,11 +312,11 @@ end
 local function modrem(msg)
   -- superuser and admins only (because sudo are always has privilege)
   if not is_admin(msg) then
-    return "You're not admin. n\ Buy here from @Gmorr ."
+    return "You're not admin.  Buy here from @Gmorr ."
   end
   local data = load_data(_config.moderation.data)
   if not data[tostring(msg.to.id)] then
-    return 'Group is not added. n\ Buy here from @Gmorr.'
+    return 'Group is not added.  Buy here from @Gmorr.'
   end
     receiver = get_receiver(msg)
     chat_info(receiver, check_member_modrem,{receiver=receiver, data=data, msg = msg})
