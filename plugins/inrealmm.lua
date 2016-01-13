@@ -430,11 +430,6 @@ local function unset_log_group(msg)
   end
 end
 
-local function help()
-  local help_text = tostring(_config.help_text_realm)
-  return help_text
-end
-
 function run(msg, matches)
     --vardump(msg)
    	local name_log = user_print_name(msg.from)
@@ -542,10 +537,7 @@ function run(msg, matches)
 
 	    end 
         end
-    	if matches[1] == 'help' and is_realm(msg) then
-      		savelog(msg.to.id, name_log.." ["..msg.from.id.."] Used /help")
-     		return help()
-    	end
+
               if matches[1] == 'set' then
                 if matches[2] == 'loggroup' then
                    savelog(msg.to.id, name_log.." ["..msg.from.id.."] set as log group")
@@ -673,7 +665,6 @@ return {
     "^[!/](removeadmin) (.*)$", -- sudoers only
     "^[!/](list) (.*)$",
         "^[!/](log)$",
-        "^[!/](help)$",
         "^!!tgservice (.+)$",
   },
   run = run
