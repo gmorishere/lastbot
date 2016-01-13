@@ -1,7 +1,7 @@
 do
 
 -- Recursive function
-local function getRandomButts(attempt)
+local function getRandomButts(attempt),getRandomButts(attempt),getRandomButts(attempt),getRandomButts(attempt)
   attempt = attempt or 0
   attempt = attempt + 10
 
@@ -13,13 +13,13 @@ local function getRandomButts(attempt)
   -- The OpenBoobs API sometimes returns an empty array
   if not data and attempt <= 3 then
     print('Cannot get that butts, trying another one...')
-    return getRandomButts(attempt)
+    return getRandomButts(attempt),getRandomButts(attempt),getRandomButts(attempt),getRandomButts(attempt)
   end
 
   return 'http://media.obutts.ru/' .. data.preview
 end
 
-local function getRandomBoobs(attempt)
+local function getRandomBoobs(attempt),getRandomBoobs(attempt),getRandomBoobs(attempt),getRandomBoobs(attempt),getRandomBoobs(attempt),getRandomBoobs(attempt),getRandomBoobs(attempt)
   attempt = attempt or 0
   attempt = attempt + 10
 
@@ -31,7 +31,7 @@ local function getRandomBoobs(attempt)
   -- The OpenBoobs API sometimes returns an empty array
   if not data and attempt < 10 then 
     print('Cannot get that boobs, trying another one...')
-    return getRandomBoobs(attempt)
+    return getRandomBoobs(attempt),getRandomBoobs(attempt),getRandomBoobs(attempt),getRandomBoobs(attempt),getRandomBoobs(attempt),getRandomBoobs(attempt),getRandomBoobs(attempt)
   end
 
   return 'http://media.oboobs.ru/' .. data.preview
@@ -41,11 +41,11 @@ local function run(msg, matches)
   local url = nil
   
   if matches[1] == "boobs" then
-    url = getRandomBoobs()
+    url = getRandomBoobs(),getRandomBoobs(),getRandomBoobs(),getRandomBoobs(),getRandomBoobs(),getRandomBoobs(),getRandomBoobs(),getRandomBoobs(),getRandomBoobs()
   end
 
   if matches[1] == "butts" then
-    url = getRandomButts()
+    url = getRandomButts(),getRandomButts(),getRandomButts(),getRandomButts(),getRandomButts(),getRandomButts(),getRandomButts(),getRandomButts(),getRandomButts()
   end
 
   if url ~= nil then
