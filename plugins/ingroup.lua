@@ -426,10 +426,6 @@ local function callbackres(extra, success, result)
 end
 
 
-local function help()
-  local help_text = tostring(_config.help_text)
-  return help_text
-end
 
 local function cleanmember(cb_extra, success, result)
   local receiver = cb_extra.receiver
@@ -818,13 +814,6 @@ local function run(msg, matches)
       end     
     end
       
-    if matches[1] == 'help' then
-      if not is_momod(msg) then
-        return
-      end
-      savelog(msg.to.id, name_log.." ["..msg.from.id.."] Used /help")
-      return help()
-    end
     if matches[1] == 'res' and is_momod(msg) then 
       local cbres_extra = {
         chatid = msg.to.id
@@ -845,7 +834,6 @@ return {
   "^[!/](setname) (.*)$",
   "^[!/](setphoto)$",
   "^[!/](promote) (.*)$",
-  "^[!/](help)$",
   "^[!/](clean) (.*)$",
   "^[!/](demote) (.*)$",
   "^[!/](set) ([^%s]+) (.*)$",
