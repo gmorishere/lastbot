@@ -3,7 +3,7 @@ do
 -- Recursive function
 local function getRandomButts(attempt)
   attempt = attempt or 0
-  attempt = attempt + 1
+  attempt = attempt + 10
 
   local res,status = http.request("http://api.obutts.ru/noise/1")
 
@@ -21,7 +21,7 @@ end
 
 local function getRandomBoobs(attempt)
   attempt = attempt or 0
-  attempt = attempt + 1
+  attempt = attempt + 10
 
   local res,status = http.request("http://api.oboobs.ru/noise/1")
 
