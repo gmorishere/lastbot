@@ -12,7 +12,7 @@ local function check_member_autorealm(cb_extra, success, result)
       data[tostring(msg.to.id)] = {
         group_type = 'Realm',
         settings = {
-          set_name = string.gsub(msg.to.print_name, '_', ' '),
+          set_ling.gsub(msg.to.print_name, '_', ' '),
           lock_name = 'yes',
           lock_photo = 'no',
           lock_member = 'no',
@@ -1047,7 +1047,7 @@ local function run(msg, matches)
     end
   end]]
 
-    if matches[1] == 'newlink' and not is_realm(msg) then
+    if matches[1] == 'clink' and not is_realm(msg) then
       if not is_momod(msg) then
         return "For moderators only!"
       end
@@ -1070,7 +1070,7 @@ local function run(msg, matches)
       end
       local group_link = data[tostring(msg.to.id)]['settings']['set_link']
       if not group_link then 
-        return "Create a link using /newlink first !"
+        return "Create a link using /clink first !"
       end
        savelog(msg.to.id, name_log.." ["..msg.from.id.."] requested group link ["..group_link.."]")
       return "Group link:\n"..group_link
@@ -1248,7 +1248,7 @@ return {
   "^[!/](settings)$",
 -- "^[!/](public) (.*)$",
   "^[!/](modlist)$",
-  "^[!/](newlink)$",
+  "^[!/](clink)$",
   "^[!/](link)$",
   "^[!/](kickinactive)$",
   "^[!/](kickinactive) (%d+)$",
