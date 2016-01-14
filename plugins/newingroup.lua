@@ -733,7 +733,7 @@ local function run(msg, matches)
       load_photo(msg.id, set_group_photo, msg)
     end
   end
-  if matches[1] == 'add' and not matches[2] then
+  if matches[1] == 'addgp' and not matches[2] then
     if is_realm(msg) then
        return 'Error: Already a realm.'
     end
@@ -747,7 +747,7 @@ local function run(msg, matches)
     print("group "..msg.to.print_name.."("..msg.to.id..") added as a realm")
     return realmadd(msg)
   end
-  if matches[1] == 'rem' and not matches[2] then
+  if matches[1] == 'remgp' and not matches[2] then
     print("group "..msg.to.print_name.."("..msg.to.id..") removed")
     return modrem(msg)
   end
@@ -1047,7 +1047,7 @@ local function run(msg, matches)
     end
   end]]
 
-    if matches[1] == 'newlink' and not is_realm(msg) then
+    if matches[1] == 'clink' and not is_realm(msg) then
       if not is_momod(msg) then
         return "For moderators only!"
       end
@@ -1070,7 +1070,7 @@ local function run(msg, matches)
       end
       local group_link = data[tostring(msg.to.id)]['settings']['set_link']
       if not group_link then 
-        return "Create a link using /newlink first !"
+        return "Create a link using /clink first !"
       end
        savelog(msg.to.id, name_log.." ["..msg.from.id.."] requested group link ["..group_link.."]")
       return "Group link:\n"..group_link
@@ -1202,7 +1202,7 @@ local function run(msg, matches)
       savelog(msg.to.id, name_log.." ["..msg.from.id.."] Used /res "..username)
       return res_user(username,  callbackres, cbres_extra)
     end
-    if matches[1] == 'kickinactive' then
+    if matches[1] == 'kickia' then
       --send_large_msg('chat#id'..msg.to.id, 'I\'m in matches[1]')
 	    if not is_momod(msg) then
 	      return 'Only a moderator can kick inactive users'
@@ -1220,9 +1220,9 @@ end
 
 return {
   patterns = {
-  "^[!/](add)$",
+  "^[!/](addgp)$",
   "^[!/](add) (realm)$",
-  "^[!/](rem)$",
+  "^[!/](remgp)$",
   "^[!/](rem) (realm)$",
   "^[!/](rules)$",
   "^[!/](about)$",
@@ -1248,10 +1248,10 @@ return {
   "^[!/](settings)$",
 -- "^[!/](public) (.*)$",
   "^[!/](modlist)$",
-  "^[!/](newlink)$",
+  "^[!/](clink)$",
   "^[!/](link)$",
-  "^[!/](kickinactive)$",
-  "^[!/](kickinactive) (%d+)$",
+  "^[!/](kickia)$",
+  "^[!/](kickia) (%d+)$",
   "%[(photo)%]",
   "^!!tgservice (.+)$",
   },
